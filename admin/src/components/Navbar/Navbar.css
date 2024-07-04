@@ -1,0 +1,21 @@
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eff9fa; 
+    padding: 10px 20px; 
+  }
+  
+  .navbar .logo {
+    width: 100px; 
+    height: auto; 
+  }
+  
+  .navbar .profile {
+    width: 40px; 
+    height: 40px; 
+    border-radius: 50%;
+  }
+  
