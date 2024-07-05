@@ -1,13 +1,15 @@
-import React, { createContext, useEffect, useState } from "react";
+import  { createContext, useState } from "react";
+import PropTypes from 'prop-types';
 import { food_list } from "../assets/assets";
 
 export const StoreContext = createContext(null);
 
 const StoreContextProvider = (props) => {
+  const { children } = props;
+
   const [cartItems, setCartItems] = useState({});
-  useEffect(() => {
-    console.log(cartItems, "cartItems");
-  }, [cartItems]);
+  const url = "http://localhost:4000";
+  const [token,setToken] = useState("")
 
   const addToCart = (itemId) => {
     setCartItems((prev) => ({
@@ -45,13 +47,20 @@ const StoreContextProvider = (props) => {
     addToCart,
     removeFromCart,
     getTotalCartAmount,
+    url,
+    token,
+    setToken
   };
 
   return (
     <StoreContext.Provider value={contextValue}>
-      {props.children}
+      {children}
     </StoreContext.Provider>
   );
+};
+
+StoreContextProvider.propTypes = {
+  children: PropTypes.node.isRequired,
 };
 
 export default StoreContextProvider;
