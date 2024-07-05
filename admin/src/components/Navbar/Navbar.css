@@ -1,21 +1,45 @@
-
-
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #eff9fa; 
-    padding: 10px 20px; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color:navy;
+  padding: 10px 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  height: 100px;
+  width: auto;
+}
+
+.admin-heading {
+  color: #ecf0f1;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.profile {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ecf0f1;
+}
+
+@media (max-width: 768px) {
+  .admin-heading {
+    font-size: 18px;
   }
   
-  .navbar .logo {
-    width: 100px; 
-    height: auto; 
+  .logo  {
+    height: 50px;
+    width: 50px;
   }
-  
-  .navbar .profile {
-    width: 40px; 
-    height: 40px; 
-    border-radius: 50%;
+  .profile{
+    height: 30px;
+    width: 30px;
   }
-  
+}
