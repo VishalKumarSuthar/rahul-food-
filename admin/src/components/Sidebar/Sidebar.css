@@ -1,33 +1,104 @@
-.sidebar{
+.sidebar {
     width: 18%;
     min-height: 100vh;
-    border: 1.5px solid #a9a9a9;
-    border-top: 0;
-    font-size: max(1vw,10px);
+    border-right: 1.5px solid #e0e0e0;
+    font-size: clamp(14px, 1vw, 16px);
+    background-color: #f8f9fa;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
+    transition: width 0.3s ease;
 }
-.sidebar-options{
+
+.sidebar-options {
     padding-top: 50px;
-    padding-left: 20%;
+    padding-left: 10%;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
 }
-.sidebar-option{
+
+.sidebar-option {
     display: flex;
     align-items: center;
     gap: 12px;
-    border: 1px solid #a9a9a9;
+    border: 1px solid #e0e0e0;
     border-right: 0;
-    padding: 8px 10px;
-    border-radius: 3px 0px 0px;
+    padding: 12px 15px;
+    border-radius: 8px 0 0 8px;
     cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: #333;
 }
-.sidebar-option.active{
+
+.sidebar-option:hover {
+    background-color: #f0f0f0;
+    transform: translateX(5px);
+}
+
+.sidebar-option.active {
     background-color: #fff0ed;
     border-color: tomato;
+    color: tomato;
+    font-weight: 600;
 }
-@media (max-width:900px) {
-    .sidebar-option p{
+
+.sidebar-option img {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease;
+}
+
+.sidebar-option:hover img {
+    transform: scale(1.1);
+}
+
+.sidebar-option p {
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media (max-width: 1200px) {
+    .sidebar {
+        width: 22%;
+    }
+}
+
+@media (max-width: 900px) {
+    .sidebar {
+        width: 80px;
+    }
+
+    .sidebar-options {
+        padding-left: 0;
+        align-items: center;
+    }
+
+    .sidebar-option {
+        justify-content: center;
+        border-radius: 8px;
+        padding: 12px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .sidebar-option p {
         display: none;
+    }
+
+    .sidebar-option:hover {
+        transform: scale(1.1);
+    }
+}
+
+@media (max-width: 600px) {
+    .sidebar {
+        width: 60px;
+    }
+
+    .sidebar-option {
+        width: 40px;
+        height: 40px;
     }
 }

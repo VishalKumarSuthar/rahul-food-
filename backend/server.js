@@ -3,7 +3,7 @@ import cors from 'cors';
 import { connectDB } from './config/db.js';
 import foodRouter from './routes/foodRoute.js';
 import userRouter from './routes/userRoute.js'; // Import the user router
-import 'dotenv/config.js'
+import 'dotenv/config'
 // app config
 const app = express();
 const port = 4000;
@@ -26,7 +26,7 @@ app.use(cors());
 // api endpoints
 app.use("/api/food", foodRouter);
 app.use("/images", express.static('uploads'));
-app.use("/api/user", userRouter); // Add the user router
+app.use("/api/user",userRouter)
 
 app.get("/", (req, res) => {
   res.send("API Working");
