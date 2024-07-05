@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-// Define the schema
+
 const foodSchema = new mongoose.Schema({
     name: { type: String, required: true },
     description: { type: String, required: true },
@@ -9,7 +9,7 @@ const foodSchema = new mongoose.Schema({
     category: { type: String, required: true },
 });
 
-// Check if the model already exists to avoid redefinition
+
 const foodModel = mongoose.models.food || mongoose.model("food", foodSchema);
 
 export default foodModel;
