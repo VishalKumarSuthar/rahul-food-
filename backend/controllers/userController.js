@@ -3,8 +3,11 @@ import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
 import validator from "validator";
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 1febf499aca91d6dac5993bdd82a08b6bfa835a5
 const createToken = (id) => {
   return jwt.sign({ id }, process.env.JWT_SECRET);
 }
@@ -13,7 +16,11 @@ const createToken = (id) => {
 const loginUser = async (req, res) => {
   const { email, password } = req.body;
   try {
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 1febf499aca91d6dac5993bdd82a08b6bfa835a5
     const user = await userModel.findOne({ email });
 
     if (!user) {
@@ -27,6 +34,7 @@ const loginUser = async (req, res) => {
     }
 
     
+<<<<<<< HEAD
 
     const isMatch = await bcrypt.compare(password, user.password);
 
@@ -35,6 +43,8 @@ const loginUser = async (req, res) => {
     }
 
 
+=======
+>>>>>>> 1febf499aca91d6dac5993bdd82a08b6bfa835a5
     const token = createToken(user._id);
     res.json({ success: true, token });
   } catch (error) {
@@ -66,7 +76,11 @@ const registerUser = async (req, res) => {
     const salt = await bcrypt.genSalt(10);
     const hashedPassword = await bcrypt.hash(password, salt);
 
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 1febf499aca91d6dac5993bdd82a08b6bfa835a5
     const newUser = new userModel({
       name: name,
       email: email,
