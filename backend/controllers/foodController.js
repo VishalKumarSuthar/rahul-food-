@@ -1,13 +1,13 @@
 import foodModel from '../models/foodModels.js';
 import fs from 'fs';
 
-// Add food item
+
 const addFood = async (req, res) => {
     if (!req.file) {
         return res.json({ success: false, message: "Image upload failed" });
     }
 
-    const image_filename = req.file.filename; // Get the filename from the uploaded file
+    const image_filename = req.file.filename; 
 
     const food = new foodModel({
         name: req.body.name,
@@ -26,7 +26,7 @@ const addFood = async (req, res) => {
     }
 };
 
-// All food list
+
 const listFood = async (req, res) => {
     try {
         const foods = await foodModel.find({});
@@ -37,7 +37,7 @@ const listFood = async (req, res) => {
     }
 };
 
-// Remove food item
+
 const removeFood = async (req, res) => {
     try {
         const food = await foodModel.findById(req.body.id);

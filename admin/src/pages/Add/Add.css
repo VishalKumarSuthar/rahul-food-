@@ -1,35 +1,91 @@
-.add{
-    width: 70%;
-    margin-left: max(5vw,25px);
-    margin-top: 50px;
-    color: #6d6d6d;
-    font-size: 16px;
-}
-.add form{
-    gap: 20px;
-}
-.add-img-upload img{
-    width: 120px;
-}
-.add-product-name, .add-product-description{
-    width: max(40%,280px);
-}
-.add-product-name input, .add-product-description textarea{
-    padding: 10px;
-}
-.add-category-price{
+/* Add.css */
+.add {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .flex-col {
     display: flex;
-    gap: 30px;
-}
-.add-category-price select, .add-category-price input{
-    max-width: 140px;
-    padding: 10px;
-}
-.add-btn{
-    max-width: 120px;
-    border: none;
-    padding: 10px;
-    background-color: black;
-    color: white;
+    flex-direction: column;
+  }
+  
+  .add-img-upload {
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .add-img-upload p {
+    margin-bottom: 10px;
+  }
+  
+  .add-img-upload img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
     cursor: pointer;
-}
+    border: 2px dashed #ccc;
+    border-radius: 50%;
+    padding: 10px;
+  }
+  
+  .add-product-name, .add-product-description, .add-category, .add-price {
+    margin-bottom: 20px;
+  }
+  
+  .add-product-name p, .add-product-description p, .add-category p, .add-price p {
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  input[type="text"], input[type="number"], select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  .add-category-price {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .add-category, .add-price {
+    flex: 1;
+  }
+  
+  .add-btn {
+    background: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .add-btn:hover {
+    background: #0056b3;
+  }
+  
+  @media (max-width: 600px) {
+    .add-category-price {
+      flex-direction: column;
+    }
+  
+    .add-category, .add-price {
+      margin-bottom: 20px;
+    }
+  }
+  
