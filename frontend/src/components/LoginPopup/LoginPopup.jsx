@@ -12,7 +12,7 @@ const LoginPopup = ({ setShowLogin }) => {
         name: "",
         email: "",
         password: ""
-    });
+    } );
 
     const onChangeHandler = (event) => {
         const name = event.target.name;
