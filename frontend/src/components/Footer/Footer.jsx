@@ -10,7 +10,7 @@ const Footer = () => {
           <p>Food delivery is a courier service in which a restaurant, store, or independent food-delivery company delivers food to a customer.</p>
           <div className="footer-social-icons">
             <img src={assets.facebook_icon} alt="" />
-            <img src={assets.twitter_icon} alt="" link=""/>
+            <img src={assets.twitter_icon} alt="" />
             <img src={assets.linkedin_icon} alt="" />
           </div>
         </div>
@@ -32,7 +32,7 @@ const Footer = () => {
         </div>
       </div>
       <hr/>
-      <p classname="footer-copyright">Copyright 2024 Food-Delivery.com - All Right Reserved</p>
+      <p className="footer-copyright">Copyright 2024 Food-Delivery.com - All Right Reserved</p>
     </div>
   )
 }
